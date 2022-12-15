@@ -6,7 +6,7 @@
 /*   By: sel-kabo <sel-kabo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 19:05:54 by sel-kabo          #+#    #+#             */
-/*   Updated: 2022/12/04 23:26:26 by sel-kabo         ###   ########.fr       */
+/*   Updated: 2022/12/08 20:27:43 by sel-kabo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	ft_hex_len(unsigned	int num)
 
 void	ft_put_hex(unsigned int num, const char format)
 {
-	char	t;
+	char	c;
 
 	if (num >= 16)
 	{
@@ -38,16 +38,16 @@ void	ft_put_hex(unsigned int num, const char format)
 	{
 		if (num <= 9)
 		{
-			t = num + '0';
-			write(1, &t, 1);
+			c = num + '0';
+			write(1, &c, 1);
 		}
 		else
 		{
 			if (format == 'x')
-				t = num - 10 + 'a';
+				c = num - 10 + 'a';
 			if (format == 'X')
-				t = num - 10 + 'A';
-			write(1, &t, 1);
+				c = num - 10 + 'A';
+			write(1, &c, 1);
 		}
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: sel-kabo <sel-kabo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 19:05:06 by sel-kabo          #+#    #+#             */
-/*   Updated: 2022/12/05 20:35:35 by sel-kabo         ###   ########.fr       */
+/*   Updated: 2022/12/15 17:06:25 by sel-kabo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdio.h>
 #include <limits.h>
 
-int ft_check(va_list args, char sm)
+int	ft_check(va_list args, char sm)
 {
 	if (sm == 'u')
 		return (ft_putnbr_uns(va_arg(args, unsigned int)));
@@ -33,12 +33,13 @@ int ft_check(va_list args, char sm)
 	return (0);
 }
 
-int ft_printf(const char *pt, ...)
+int	ft_printf(const char *pt, ...)
 {
 	va_list	args;
-	int i;
-	int sum;
-	int r;
+	int		i;
+	int		sum;
+	int		r;
+
 	va_start(args, pt);
 	i = 0;
 	sum = 0;
@@ -48,9 +49,7 @@ int ft_printf(const char *pt, ...)
 	while (pt[i])
 	{
 		if (pt[i] == '%')
-		{
 			sum += ft_check(args, pt[++i]);
-		}
 		else
 		{
 			ft_putchar(pt[i]);
@@ -60,8 +59,4 @@ int ft_printf(const char *pt, ...)
 	}
 	va_end(args);
 	return (sum);
-}
-int main()
-{
-	printf("\n%d\n", ft_printf("%d", 123));
 }

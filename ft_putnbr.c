@@ -6,13 +6,13 @@
 /*   By: sel-kabo <sel-kabo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 19:04:39 by sel-kabo          #+#    #+#             */
-/*   Updated: 2022/12/05 19:56:51 by sel-kabo         ###   ########.fr       */
+/*   Updated: 2022/12/08 15:11:32 by sel-kabo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_putnbr(long n)
+int	ft_putnbr(long n)
 {
 	if (n < 0)
 		return (ft_putchar('-') + ft_putnbr(-n));
@@ -23,4 +23,3 @@ int ft_putnbr(long n)
 	else
 		return (ft_putchar(n + '0'));
 }
-

@@ -1,5 +1,5 @@
 CC=cc
-#FLAGS= -Wall -Werror -Wextra 
+FLAGS= -Wall -Werror -Wextra 
 AR=ar cr
 RM=rm -rf
 FILES=	ft_print_hex.c ft_print_ptr.c ft_printf.c ft_putchar.c ft_putnbr_uns.c ft_putnbr.c ft_putstr.c ft_strlen.c
